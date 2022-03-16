@@ -1,5 +1,11 @@
 const express = require('express')
- //Carregando a variavel
+require('dotenv').config() //Carregando a variavel
+const InicializaMongoServer = require('./config/Db')
+//Iniciando o servidor MongoDB
+InicializaMongoServer()
+
+//Definição das rotas da aplicação
+const rotasCategoria = require('./Routes/Categoria')
 
 const app = express()
 //Porta DEFAULT
@@ -13,8 +19,10 @@ app.get('/', (req, res) => {
     res.json({mensagem: "API 100% funcional",
                     versao: '1.0.0'})
 })
+/*Rotas da categoria */
+app.use('/categorias', rotasCategoria)
 
 app.listen(PORT, (req, res) =>{
     //Iniciando a porta
-    console.log(`Servidor iniciadona porta ${PORT}`)
+    console.log(`Servidor iniciado na porta ${PORT}`)
 })
