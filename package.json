@@ -1,0 +1,19 @@
+{
+  "name": "backeasy",
+  "version": "1.0.0",
+  "description": "Projeto do BackEnd do EasyWay ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "nodejs"
+  ],
+  "author": "Rafaela Góes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^5.11.15"
+  }
+}
