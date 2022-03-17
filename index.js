@@ -6,7 +6,7 @@ InicializaMongoServer()
 
 //Definição das rotas da aplicação
 const rotasProduto = require('./Routes/Produto')
-const rotasCadstro = require ('./Routes/Cadastro')
+
 
 const app = express()
 
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 })
 /*Rotas  */
 app.use('/produtos', rotasProduto)
-app.use('/cadastros', rotasCadstro)
+
 
 app.listen(PORT, (req, res) =>{
     //Iniciando a porta
