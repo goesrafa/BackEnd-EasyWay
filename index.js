@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
     res.json({mensagem: "API 100% funcional",
                     versao: '1.0.0'})
 })
-/*Rotas do produto */
+/*Rotas  */
 app.use('/produtos', rotasProduto)
-app.use('/cadastro', rotasCadstro)
+app.use('/cadastros', rotasCadstro)
 
 app.listen(PORT, (req, res) =>{
     //Iniciando a porta

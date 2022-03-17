@@ -43,8 +43,10 @@ router.get('/', async(req, res) => {
  * POST /produtos
  ********************************/
 const validaProduto = [
-    check("nome", "O nome do produto é obrigatório.").not().isEmpty(),
-    check("status", "Informe o status válido para o produto.").isIn(['ativo', 'inativo'])
+    check('nome').not().isEmpty().withMessage("Nome obrigatório"),
+    check('preco').isNumeric().withMessage('O preço informado deve ser apenas número')
+    .isFloat({min:0}).withMessage('O preço deve ser a partir de 0'),
+    check('descricao').not().isEmpty().withMessage("A descrição do produto é obrigatória"),
 ]
 
  router.post('/ ',validaProduto,  async(req, res) => { 

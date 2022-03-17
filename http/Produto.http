@@ -1,7 +1,7 @@
 //Teste de requisição
 
 @baseURL =  http://localhost:4001
-@id = 62329d77b49d10337b6ad717
+@id = 
 ###
 // GET - Listar os Produtos
 GET {{baseURL}}/produtos
@@ -28,6 +28,3 @@ content-Type: application/json
 // PUT - Atualizar um produto
 PUT  {{baseURL}}/produtos
 content-Type: application/json
-
-
-
