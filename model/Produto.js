@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 //Criação do Schema Cadastro
-const CategoriaSchema = mongoose.Schema({
+const ProdutoSchema = mongoose.Schema({
     nome: {
         type: String,
         unique: true //Cria um indice unico
@@ -13,4 +13,4 @@ const CategoriaSchema = mongoose.Schema({
     }
 }, {timestamps: true} ) //Mostra a data e hora da alteração
 
-module.exports = mongoose.model('categoria', CategoriaSchema)
+module.exports = mongoose.model('produto', ProdutoSchema)

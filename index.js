@@ -5,9 +5,14 @@ const InicializaMongoServer = require('./config/Db')
 InicializaMongoServer()
 
 //Definição das rotas da aplicação
-const rotasCategoria = require('./Routes/Categoria')
+const rotasProduto = require('./Routes/Produto')
+const rotasCadstro = require ('./Routes/Cadastro')
 
 const app = express()
+
+//Por segurança remover
+app.disable('x-powered-by')
+
 //Porta DEFAULT
 const PORT = process.env.PORT
 //Conteúdo JSON
@@ -19,8 +24,9 @@ app.get('/', (req, res) => {
     res.json({mensagem: "API 100% funcional",
                     versao: '1.0.0'})
 })
-/*Rotas da categoria */
-app.use('/categorias', rotasCategoria)
+/*Rotas do produto */
+app.use('/produtos', rotasProduto)
+app.use('/cadastro', rotasCadstro)
 
 app.listen(PORT, (req, res) =>{
     //Iniciando a porta

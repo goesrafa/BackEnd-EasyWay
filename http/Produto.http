@@ -1,0 +1,33 @@
+//Teste de requisição
+
+@baseURL =  http://localhost:4001
+@id = 62329d77b49d10337b6ad717
+###
+// GET - Listar os Produtos
+GET {{baseURL}}/produtos
+content-Type: application/json
+
+###
+// GET - Listargem do produto pelo id
+GET {{baseURL}}/produtos/{{id}}
+content-Type: application/json
+
+###
+// POST - Incluir um novo produto
+POST  {{baseURL}}/produtos
+content-Type: application/json
+
+{"nome": "Achocolatado", "status": "ativo"}
+
+###
+// DELETE  - Apagar um produto
+DELETE {{baseURL}}/produtos/{{id}}
+content-Type: application/json
+
+###
+// PUT - Atualizar um produto
+PUT  {{baseURL}}/produtos
+content-Type: application/json
+
+
+

@@ -8,7 +8,7 @@ const InicializaMongoServer = async() =>{
             useNewUrlParser: true, //Utilização do ultimo Parse de URL (versão mais nova)
             useCreateIndex: true, //Sendo necessário, cria indices
             useFindAndModify: false, //Padrão sempre é encontrar os registros e alterar os mesmo
-            useUnifiedTopology: true, //Utilia a engine para descoberta de servidores
+            useUnifiedTopology: true, //Utiliza a engine para descoberta de servidores
         })
         console.log("Conexão com o MongoDB")
     } catch(e){
