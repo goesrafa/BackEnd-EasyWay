@@ -8,4 +8,5 @@
     - nodemon(para o Hot Reload)
 ### Armazenamento do Projeto
     - Heroku
+    -GitHub
     
